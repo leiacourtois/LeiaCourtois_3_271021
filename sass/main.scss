@@ -7,18 +7,23 @@
 $couleur-primaire : #9356DC;
 $couleur-secondaire : #FF79DA;
 $couleur-tertiaire : #99E2D0;
+$couleur-fond-primaire : #FFFFFF;
+$couleur-fond-secondaire : #f6f6f6;
 
 @mixin centre{
 	display: flex;
 	justify-content: center;
 }
 
-
-
 /*balises générales*/
 
 body{
 	font-family: 'Roboto', sans-serif;
+	background-color: #eaeaea;
+}
+
+p{
+	font-size: 17px;
 }
 
 /*header*/
@@ -26,8 +31,46 @@ body{
 header{
 	@include centre;
 	padding: 25px 0 10px 0;
-	box-shadow: 1px 4px 15px grey;
+	box-shadow: 1px 2px 14px grey;
+	background-color: $couleur-fond-primaire;
 	img{
 		width: 170px;
+	}
+}
+
+/*localisation*/
+
+.localisation{
+	@include centre;
+	padding: 15px 0;
+	i{
+		padding-right: 17px;
+	}
+}
+
+/*slogan+bouton*/
+
+.slogan{
+	background-color: $couleur-fond-secondaire;
+	padding: 45px 40px;
+	text-align: center;
+	h1{
+		padding-bottom: 15px;
+	}
+	p{
+		font-weight: 100;
+		padding-bottom: 30px;
+	}
+	a{
+		padding: 15px;
+		margin-botton: 10px;
+		border-radius: 50px;
+		background: linear-gradient(175deg, $couleur-secondaire, $couleur-primaire);
+		border: none;
+		font-family: 'Roboto', sans-serif;
+		font-size: 15px;
+		color: white;
+		box-shadow: 2px 3px 6px grey;
+		text-decoration: none;
 	}
 }

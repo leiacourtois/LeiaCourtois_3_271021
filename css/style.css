@@ -8,6 +8,11 @@
 /*balises générales*/
 body {
   font-family: "Roboto", sans-serif;
+  background-color: #eaeaea;
+}
+
+p {
+  font-size: 17px;
 }
 
 /*header*/
@@ -15,10 +20,47 @@ header {
   display: flex;
   justify-content: center;
   padding: 25px 0 10px 0;
-  box-shadow: 1px 4px 15px grey;
+  box-shadow: 1px 2px 14px grey;
+  background-color: #FFFFFF;
 }
 header img {
   width: 170px;
+}
+
+/*localisation*/
+.localisation {
+  display: flex;
+  justify-content: center;
+  padding: 15px 0;
+}
+.localisation i {
+  padding-right: 17px;
+}
+
+/*slogan+bouton*/
+.slogan {
+  background-color: #f6f6f6;
+  padding: 45px 40px;
+  text-align: center;
+}
+.slogan h1 {
+  padding-bottom: 15px;
+}
+.slogan p {
+  font-weight: 100;
+  padding-bottom: 30px;
+}
+.slogan a {
+  padding: 15px;
+  margin-botton: 10px;
+  border-radius: 50px;
+  background: linear-gradient(175deg, #FF79DA, #9356DC);
+  border: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  color: white;
+  box-shadow: 2px 3px 6px grey;
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=style.css.map */
