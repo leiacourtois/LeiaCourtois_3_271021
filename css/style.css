@@ -1,3 +1,24 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+/*balises générales*/
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+/*header*/
+header {
+  display: flex;
+  justify-content: center;
+  padding: 25px 0 10px 0;
+  box-shadow: 1px 4px 15px grey;
+}
+header img {
+  width: 170px;
+}
 
 /*# sourceMappingURL=style.css.map */

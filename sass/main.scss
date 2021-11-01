@@ -1,0 +1,33 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+$couleur-primaire : #9356DC;
+$couleur-secondaire : #FF79DA;
+$couleur-tertiaire : #99E2D0;
+
+@mixin centre{
+	display: flex;
+	justify-content: center;
+}
+
+
+
+/*balises générales*/
+
+body{
+	font-family: 'Roboto', sans-serif;
+}
+
+/*header*/
+
+header{
+	@include centre;
+	padding: 25px 0 10px 0;
+	box-shadow: 1px 4px 15px grey;
+	img{
+		width: 170px;
+	}
+}
