@@ -63,4 +63,39 @@ header img {
   text-decoration: none;
 }
 
+/*fonctionnement*/
+.fonctionnement {
+  background-color: #FFFFFF;
+  padding: 50px 20px;
+}
+.fonctionnement h2 {
+  margin-bottom: 20px;
+}
+.fonctionnement p {
+  padding: 25px 35px;
+  margin: 0 0 25px 10px;
+  border-radius: 20px;
+  background-color: #f6f6f6;
+  box-shadow: 1px 2px 11px silver;
+}
+.fonctionnement p:hover {
+  background-color: #e9ddf8;
+}
+.fonctionnement p:hover i {
+  color: #9356DC;
+}
+.fonctionnement span {
+  background-color: #9356DC;
+  padding: 2px 7px;
+  font-size: 15px;
+  color: white;
+  border-radius: 20px;
+  position: absolute;
+  margin-left: -45px;
+}
+.fonctionnement i {
+  margin-right: 30px;
+  color: grey;
+}
+
 /*# sourceMappingURL=style.css.map */
