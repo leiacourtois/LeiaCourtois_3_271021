@@ -119,4 +119,53 @@ header{
 	}
 }
 
+/*restaurants*/
+
+#restaurants{
+	background-color: $couleur-fond-secondaire;
+	padding: 55px 20px;
+	figure{
+		width: 100%;
+		background-color: $couleur-fond-primaire;
+		border-radius: 20px;
+		margin: 20px 0;
+		@include ombres;
+	}
+	a{
+		text-decoration: none;
+		color: black;
+	}
+	img{
+		width: 100%;
+		height: 165px;
+		object-fit: cover;
+		border-radius: 20px 20px 0 0 ;
+	}
+	figcaption{
+		display: flex;
+		justify-content: space-between;
+		padding: 15px;
+	}
+	i{
+		font-weight: 50;
+		font-size: 20px;
+
+	}
+	p{
+		font-weight: 100;
+	}
+}
+
+.nouveau{
+	position: absolute;
+	margin-top: -150px;
+	right: 40px;
+	font-size: 13px;
+	padding: 5px 8px;
+	border-radius: 3px;
+	background-color: #99e2d0;
+	color: #008766;
+}
+
+
 
