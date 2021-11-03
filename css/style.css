@@ -12,19 +12,23 @@ body {
 }
 
 p {
-  font-size: 17px;
+  font-size: 15px;
+}
+
+h2 {
+  font-size: 21px;
 }
 
 /*header*/
 header {
   display: flex;
   justify-content: center;
-  padding: 25px 0 10px 0;
+  padding: 19px 0 5px 0;
   box-shadow: 1px 2px 14px grey;
   background-color: #FFFFFF;
 }
 header img {
-  width: 170px;
+  width: 150px;
 }
 
 /*localisation*/
@@ -40,10 +44,10 @@ header img {
 /*slogan+bouton*/
 .slogan {
   background-color: #f6f6f6;
-  padding: 45px 40px;
+  padding: 45px 9%;
   text-align: center;
 }
-.slogan h1 {
+.slogan h2 {
   padding-bottom: 15px;
 }
 .slogan p {
@@ -51,13 +55,12 @@ header img {
   padding-bottom: 30px;
 }
 .slogan a {
-  padding: 15px;
-  margin-botton: 10px;
+  padding: 12px 15px;
   border-radius: 50px;
   background: linear-gradient(175deg, #FF79DA, #9356DC);
   border: none;
   font-family: "Roboto", sans-serif;
-  font-size: 15px;
+  font-size: 13px;
   color: white;
   box-shadow: 2px 3px 6px grey;
   text-decoration: none;
@@ -66,20 +69,20 @@ header img {
 /*fonctionnement*/
 .fonctionnement {
   background-color: #FFFFFF;
-  padding: 50px 20px;
+  padding: 50px 5%;
 }
 .fonctionnement h2 {
   margin-bottom: 20px;
 }
 .fonctionnement p {
-  padding: 25px 35px;
+  padding: 25px 0 25px 26px;
   margin: 0 0 25px 10px;
   border-radius: 20px;
   background-color: #f6f6f6;
-  box-shadow: 1px 2px 11px silver;
+  box-shadow: 1px 2px 11px #e5e5e5;
 }
 .fonctionnement p:hover {
-  background-color: #e9ddf8;
+  background-color: #f2eafb;
 }
 .fonctionnement p:hover i {
   color: #9356DC;
@@ -87,14 +90,14 @@ header img {
 .fonctionnement span {
   background-color: #9356DC;
   padding: 2px 7px;
-  font-size: 15px;
+  font-size: 13px;
   color: white;
   border-radius: 20px;
   position: absolute;
-  margin-left: -45px;
+  margin-left: -38px;
 }
 .fonctionnement i {
-  margin-right: 30px;
+  margin-right: 20px;
   color: grey;
 }
 
@@ -106,9 +109,9 @@ header img {
 #restaurants figure {
   width: 100%;
   background-color: #FFFFFF;
-  border-radius: 20px;
+  border-radius: 15px;
   margin: 20px 0;
-  box-shadow: 1px 2px 11px silver;
+  box-shadow: 1px 2px 11px #e5e5e5;
 }
 #restaurants a {
   text-decoration: none;
@@ -118,30 +121,60 @@ header img {
   width: 100%;
   height: 165px;
   object-fit: cover;
-  border-radius: 20px 20px 0 0;
-}
-#restaurants figcaption {
-  display: flex;
-  justify-content: space-between;
-  padding: 15px;
+  border-radius: 15px 15px 0 0;
 }
 #restaurants i {
   font-weight: 50;
   font-size: 20px;
 }
-#restaurants p {
+
+figcaption {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
+figcaption p {
   font-weight: 100;
 }
 
 .nouveau {
   position: absolute;
-  margin-top: -150px;
-  right: 40px;
-  font-size: 13px;
+  margin-top: -154px;
+  right: 35px;
+  font-size: 14px;
   padding: 5px 8px;
   border-radius: 3px;
   background-color: #99e2d0;
   color: #008766;
+}
+
+/*pied-de-page*/
+footer {
+  background-color: #353535;
+  padding: 6%;
+}
+footer h4 {
+  font-family: "Shrikhand", cursive;
+  color: white;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+footer a {
+  text-decoration: none;
+  color: white;
+}
+footer p {
+  margin-bottom: 10px;
+}
+
+.fa-utensils {
+  font-size: 15px;
+  margin-right: 3%;
+}
+
+.fa-hands-helping {
+  font-size: 11px;
+  margin-right: 2%;
 }
 
 /*# sourceMappingURL=style.css.map */
