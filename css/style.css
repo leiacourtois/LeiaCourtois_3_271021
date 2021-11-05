@@ -55,16 +55,16 @@ header img, .header-menu img {
   padding-bottom: 30px;
 }
 .slogan a {
-  padding: 12px 15px;
   border-radius: 50px;
   background: linear-gradient(175deg, #FF79DA, #9356DC);
   border: none;
   font-family: "Roboto", sans-serif;
-  font-size: 13px;
   color: white;
   box-shadow: 2px 3px 6px grey;
   text-decoration: none;
   transition: 400ms;
+  font-size: 13px;
+  padding: 12px 15px;
 }
 .slogan a:hover {
   box-shadow: 9px 10px 9px #737373;
@@ -197,9 +197,29 @@ footer p {
   margin-right: 13px;
 }
 
-/*La palette du gout*/
+/*page des menus*/
+/*images restaurants*/
 .la-palette-du-gout {
   background-image: url("../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+  background-size: 130% auto;
+  background-repeat: no-repeat;
+}
+
+.la-note-enchantee {
+  background-image: url("../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+  background-size: 130% auto;
+  background-repeat: no-repeat;
+}
+
+.a-la-francaise {
+  background-image: url("../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+  background-size: 130% auto;
+  background-repeat: no-repeat;
+}
+
+.le-delice-des-sens {
+  background-image: url("../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+  background-size: 130% auto;
   background-repeat: no-repeat;
 }
 
@@ -209,17 +229,88 @@ footer p {
   justify-content: space-around;
   padding-right: 15%;
 }
+.header-menu i {
+  text-decoration: none;
+  color: black;
+}
 
 /*menu*/
 .menu {
   padding-top: 200px;
 }
 .menu h1 {
+  display: flex;
+  justify-content: space-between;
   background-color: #f6f6f6;
+  padding: 40px 8% 10px 4%;
+  font-family: "Shrikhand", cursive;
+  font-size: 23px;
+  border-radius: 35px 35px 0 0;
+}
+.menu h1 i {
+  font-weight: 100;
 }
 
 form {
+  text-align: center;
   background-color: #f6f6f6;
+  padding: 0 4%;
+}
+form h2 {
+  text-align: left;
+  font-size: 17px;
+  padding: 20px 0 3px 0;
+  margin-bottom: 10px;
+  font-weight: 100;
+}
+form h2 span {
+  padding-bottom: 3px;
+  border-bottom: 2px solid #99E2D0;
+}
+form button {
+  border-radius: 50px;
+  background: linear-gradient(175deg, #FF79DA, #9356DC);
+  border: none;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  box-shadow: 2px 3px 6px grey;
+  text-decoration: none;
+  transition: 400ms;
+  font-size: 15px;
+  padding: 12px 13%;
+  margin: 40px 0 50px 0;
+}
+form button:hover {
+  box-shadow: 9px 10px 9px #737373;
+  background: linear-gradient(175deg, #ff88de, #9b63df);
+}
+
+.list-menu {
+  text-align: left;
+  background-color: #FFFFFF;
+  margin-bottom: 15px;
+  box-shadow: 1px 2px 11px #e5e5e5;
+  padding: 10px 23px 10px 10px;
+  border-radius: 13px;
+}
+.list-menu h3 {
+  font-size: 17px;
+  padding-bottom: 5px;
+}
+.list-menu p {
+  font-size: 14px;
+  font-weight: 100;
+}
+.list-menu input {
+  display: none;
+}
+.list-menu span {
+  font-size: 14px;
+}
+
+.menu-flex {
+  display: flex;
+  justify-content: space-between;
 }
 
 /*# sourceMappingURL=style.css.map */
