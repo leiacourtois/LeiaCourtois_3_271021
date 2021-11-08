@@ -14,9 +14,19 @@ body {
 p {
   font-size: 15px;
 }
+@media screen and (min-width: 1025px) {
+  p {
+    font-size: 19px;
+  }
+}
 
 h2 {
   font-size: 21px;
+}
+@media screen and (min-width: 1025px) {
+  h2 {
+    font-size: 28px;
+  }
 }
 
 /*header*/
@@ -29,6 +39,11 @@ header, .header-menu {
 }
 header img, .header-menu img {
   width: 150px;
+}
+@media screen and (min-width: 1025px) {
+  header img, .header-menu img {
+    width: 210px;
+  }
 }
 
 /*localisation*/
@@ -70,6 +85,11 @@ header img, .header-menu img {
   box-shadow: 9px 10px 9px #737373;
   background: linear-gradient(175deg, #ff88de, #9b63df);
 }
+@media screen and (min-width: 1025px) {
+  .slogan a {
+    font-size: 17px;
+  }
+}
 
 /*fonctionnement*/
 .fonctionnement {
@@ -93,6 +113,11 @@ header img, .header-menu img {
 .fonctionnement p:hover i {
   color: #9356DC;
 }
+@media screen and (min-width: 1025px) {
+  .fonctionnement p {
+    width: 28%;
+  }
+}
 .fonctionnement span {
   background-color: #9356DC;
   padding: 2px 7px;
@@ -102,18 +127,30 @@ header img, .header-menu img {
   position: absolute;
   margin-left: -38px;
 }
+@media screen and (min-width: 1025px) {
+  .fonctionnement span {
+    font-size: 18px;
+    padding: 3px 9px;
+    margin-left: -41px;
+  }
+}
 .fonctionnement i {
   margin-right: 20px;
   color: grey;
+}
+@media screen and (min-width: 1025px) {
+  .fonctionnement div {
+    display: flex;
+    justify-content: space-around;
+  }
 }
 
 /*restaurants*/
 #restaurants {
   background-color: #f6f6f6;
-  padding: 55px 20px;
+  padding: 55px 5%;
 }
 #restaurants figure {
-  width: 100%;
   overflow: hidden;
   background-color: #FFFFFF;
   border-radius: 15px;
@@ -124,18 +161,29 @@ header img, .header-menu img {
 #restaurants a {
   text-decoration: none;
   color: black;
+  width: 100%;
 }
 #restaurants a:hover img {
-  width: 104%;
+  width: 103%;
 }
 #restaurants a:hover h3 {
   color: #9356DC;
+}
+@media screen and (min-width: 1025px) {
+  #restaurants a {
+    width: 24%;
+  }
 }
 #restaurants img {
   width: 100%;
   height: 165px;
   object-fit: cover;
-  transition: 400ms;
+  transition: 500ms;
+}
+@media screen and (min-width: 1025px) {
+  #restaurants img {
+    height: 250px;
+  }
 }
 #restaurants i {
   font-weight: 50;
@@ -143,6 +191,13 @@ header img, .header-menu img {
 }
 #restaurants h3 {
   transition: 400ms;
+}
+
+@media screen and (min-width: 1025px) {
+  .cards {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 figcaption {
@@ -156,19 +211,23 @@ figcaption p {
 
 .nouveau {
   position: absolute;
-  margin-top: -154px;
-  right: 35px;
+  margin: -154px 0 0 72%;
   font-size: 14px;
   padding: 5px 8px;
   border-radius: 3px;
   background-color: #99E2D0;
   color: #008766;
 }
+@media screen and (min-width: 1025px) {
+  .nouveau {
+    margin: -240px 0 0 14.5%;
+  }
+}
 
 /*pied-de-page*/
 footer {
   background-color: #353535;
-  padding: 6%;
+  padding: 30px 6%;
 }
 footer h4 {
   font-family: "Shrikhand", cursive;
@@ -203,24 +262,32 @@ footer p {
   background-image: url("../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
   background-size: 130% auto;
   background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: top center;
 }
 
 .la-note-enchantee {
   background-image: url("../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
   background-size: 130% auto;
   background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: top center;
 }
 
 .a-la-francaise {
   background-image: url("../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
   background-size: 130% auto;
   background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: top center;
 }
 
 .le-delice-des-sens {
   background-image: url("../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
   background-size: 130% auto;
   background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: top center;
 }
 
 /*header*/
@@ -294,7 +361,7 @@ form button:hover {
   border-radius: 13px;
 }
 .list-menu h3 {
-  font-size: 17px;
+  font-size: 15px;
   padding-bottom: 5px;
 }
 .list-menu p {
