@@ -60,9 +60,14 @@ $breakpoints:(
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: top center;
+	@media screen and (min-width: map-get($breakpoints, desktop)){
+		background-size: 100% auto;
+		background-position: center -355px;
+	}
+
 }
 
-@mixin tablet{
+@mixin tablette{
   @media screen and (min-width: map-get($breakpoints, tablet)){
       @content;
   }
@@ -105,7 +110,7 @@ header{
 	img{
 		width: 150px;
 		@include desktop{
-			width: 210px;
+			width: 230px;
 		}
 	}
 }
@@ -280,6 +285,9 @@ footer{
 		color: white;
 		font-size: 18px;
 		margin-bottom: 20px;
+		@include desktop{
+			font-size: 29px;
+		}
 	}
 	a{
 		text-decoration: none;
@@ -290,6 +298,16 @@ footer{
 	}
 	p{
 		margin-bottom: 10px;
+	}
+	div{
+		@include desktop{
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+		}
+	}
+	@include desktop{
+		padding: 40px 20%;
 	}
 }
 
@@ -336,6 +354,10 @@ footer{
 	i{
 		text-decoration: none;
 		color: black;
+		font-size: 20px;
+	}
+	@include desktop{
+		padding-right: 30%;
 	}
 }
 
@@ -353,6 +375,10 @@ footer{
 		border-radius: 35px 35px 0 0;
 		i{
 			font-weight: 100;
+		}
+		@include desktop{
+			margin: 300px 20% 0 20%;
+			font-size: 33px;
 		}
 	}
 }
@@ -372,12 +398,23 @@ form{
 			padding-bottom: 3px;
 			border-bottom: 2px solid $couleur-tertiaire;
 		}
+		@include desktop{
+			font-size: 23px;
+		}
 	}
 	button{
 		@include bouton;
 		font-size: 15px;
 		padding: 12px 13%;
 		margin: 40px 0 50px 0;
+		@include desktop{
+			font-size: 20px;
+			padding: 17px 6%;
+		}
+	}
+	@include desktop{
+		margin: 0 20%;
+		border-radius: 0 0 35px 35px;
 	}
 }
 
@@ -391,16 +428,25 @@ form{
 	h3{
 		font-size: 15px;
 		padding-bottom: 5px;
+		@include desktop{
+			font-size: 18px;
+		}
 	}
 	p{
 		font-size: 14px;
 		font-weight: 100;
+		@include desktop{
+			font-size: 17px;
+		}
 	}
 	input{
 		display: none;
 	}
 	span{
 		font-size: 14px;
+		@include desktop{
+			font-size: 19px;
+		}
 	}
 }
 
