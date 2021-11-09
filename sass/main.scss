@@ -88,6 +88,9 @@ body{
 
 p{
 	font-size: 15px;
+	@include tablette{
+		font-size: 17px;
+	}
 	@include desktop{
 		font-size: 19px;
 	}
@@ -95,6 +98,9 @@ p{
 
 h2{
 	font-size: 21px;
+	@include tablette{
+		font-size: 24px;
+	}
 	@include desktop{
 		font-size: 28px;
 	}
@@ -142,6 +148,9 @@ header{
 		@include bouton;
 		font-size: 13px;
 		padding: 12px 15px;
+		@include tablette{
+			font-size: 15px;
+		}
 		@include desktop{
 			font-size: 17px;
 		}
@@ -181,6 +190,9 @@ header{
 		border-radius: 20px;
 		position: absolute;
 		margin-left: -38px;
+		@include tablette{
+			font-size: 16px;
+		}
 		@include desktop{
 			font-size: 18px;
 			padding: 3px 9px;
@@ -211,6 +223,7 @@ header{
 		margin: 20px 0;
 		@include ombres;
 		transition: 400ms;
+		position: relative;
 
 	}
 	a{
@@ -223,6 +236,10 @@ header{
 		&:hover h3{
 			color: $couleur-primaire;
 		}
+		@include tablette{
+			padding-right: 10px;
+			width: 50%;
+		}
 		@include desktop{
 			width: 24%;
 		}
@@ -232,6 +249,9 @@ header{
 		height: 165px;
 		object-fit: cover;
 		transition: 500ms;
+		@include tablette{
+			height: 200px;
+		}
 		@include desktop{
 			height: 250px;
 		}
@@ -247,9 +267,10 @@ header{
 }
 
 .cards{
-	@include desktop{
+	@include tablette{
 		display: flex;
 		justify-content: space-between;
+		flex-wrap: wrap;
 	}
 }
 
@@ -264,15 +285,13 @@ figcaption{
 
 .nouveau{
 	position: absolute;
-	margin: -154px 0 0 72%;
+	top: 12px;
+	right: 12px;
 	font-size: 14px;
 	padding: 5px 8px;
 	border-radius: 3px;
 	background-color: $couleur-tertiaire;
 	color: #008766;
-	@include desktop{
-		margin: -240px 0 0 14.5%;
-	}
 }
 
 /*pied-de-page*/

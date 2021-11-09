@@ -14,6 +14,11 @@ body {
 p {
   font-size: 15px;
 }
+@media screen and (min-width: 600px) {
+  p {
+    font-size: 17px;
+  }
+}
 @media screen and (min-width: 1025px) {
   p {
     font-size: 19px;
@@ -22,6 +27,11 @@ p {
 
 h2 {
   font-size: 21px;
+}
+@media screen and (min-width: 600px) {
+  h2 {
+    font-size: 24px;
+  }
 }
 @media screen and (min-width: 1025px) {
   h2 {
@@ -85,6 +95,11 @@ header img, .header-menu img {
   box-shadow: 9px 10px 9px #737373;
   background: linear-gradient(175deg, #ff88de, #9b63df);
 }
+@media screen and (min-width: 600px) {
+  .slogan a {
+    font-size: 15px;
+  }
+}
 @media screen and (min-width: 1025px) {
   .slogan a {
     font-size: 17px;
@@ -127,6 +142,11 @@ header img, .header-menu img {
   position: absolute;
   margin-left: -38px;
 }
+@media screen and (min-width: 600px) {
+  .fonctionnement span {
+    font-size: 16px;
+  }
+}
 @media screen and (min-width: 1025px) {
   .fonctionnement span {
     font-size: 18px;
@@ -157,6 +177,7 @@ header img, .header-menu img {
   margin: 20px 0;
   box-shadow: 1px 2px 11px #e5e5e5;
   transition: 400ms;
+  position: relative;
 }
 #restaurants a {
   text-decoration: none;
@@ -169,6 +190,12 @@ header img, .header-menu img {
 #restaurants a:hover h3 {
   color: #9356DC;
 }
+@media screen and (min-width: 600px) {
+  #restaurants a {
+    padding-right: 10px;
+    width: 50%;
+  }
+}
 @media screen and (min-width: 1025px) {
   #restaurants a {
     width: 24%;
@@ -179,6 +206,11 @@ header img, .header-menu img {
   height: 165px;
   object-fit: cover;
   transition: 500ms;
+}
+@media screen and (min-width: 600px) {
+  #restaurants img {
+    height: 200px;
+  }
 }
 @media screen and (min-width: 1025px) {
   #restaurants img {
@@ -193,10 +225,11 @@ header img, .header-menu img {
   transition: 400ms;
 }
 
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 600px) {
   .cards {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 }
 
@@ -211,17 +244,13 @@ figcaption p {
 
 .nouveau {
   position: absolute;
-  margin: -154px 0 0 72%;
+  top: 12px;
+  right: 12px;
   font-size: 14px;
   padding: 5px 8px;
   border-radius: 3px;
   background-color: #99E2D0;
   color: #008766;
-}
-@media screen and (min-width: 1025px) {
-  .nouveau {
-    margin: -240px 0 0 14.5%;
-  }
 }
 
 /*pied-de-page*/
