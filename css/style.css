@@ -264,6 +264,11 @@ footer h4 {
   font-size: 18px;
   margin-bottom: 20px;
 }
+@media screen and (min-width: 600px) {
+  footer h4 {
+    font-size: 24px;
+  }
+}
 @media screen and (min-width: 1025px) {
   footer h4 {
     font-size: 29px;
@@ -311,10 +316,14 @@ footer p {
   background-attachment: fixed;
   background-position: top center;
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 600px) {
   .la-palette-du-gout {
     background-size: 100% auto;
-    background-position: center -355px;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .la-palette-du-gout {
+    background-position: center center;
   }
 }
 
@@ -325,10 +334,14 @@ footer p {
   background-attachment: fixed;
   background-position: top center;
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 600px) {
   .la-note-enchantee {
     background-size: 100% auto;
-    background-position: center -355px;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .la-note-enchantee {
+    background-position: center center;
   }
 }
 
@@ -339,10 +352,14 @@ footer p {
   background-attachment: fixed;
   background-position: top center;
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 600px) {
   .a-la-francaise {
     background-size: 100% auto;
-    background-position: center -355px;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .a-la-francaise {
+    background-position: center center;
   }
 }
 
@@ -353,10 +370,14 @@ footer p {
   background-attachment: fixed;
   background-position: top center;
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 600px) {
   .le-delice-des-sens {
     background-size: 100% auto;
-    background-position: center -355px;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .le-delice-des-sens {
+    background-position: center center;
   }
 }
 
@@ -370,6 +391,11 @@ footer p {
   text-decoration: none;
   color: black;
   font-size: 20px;
+}
+@media screen and (min-width: 600px) {
+  .header-menu {
+    padding-right: 27%;
+  }
 }
 @media screen and (min-width: 1025px) {
   .header-menu {
@@ -393,10 +419,21 @@ footer p {
 .menu h1 i {
   font-weight: 100;
 }
+@media screen and (min-width: 600px) {
+  .menu h1 {
+    font-size: 28px;
+    padding: 40px 10% 10px 7%;
+  }
+}
 @media screen and (min-width: 1025px) {
   .menu h1 {
-    margin: 300px 20% 0 20%;
+    margin: 250px 20% 0 20%;
     font-size: 33px;
+  }
+}
+@media screen and (min-width: 600px) {
+  .menu {
+    padding-top: 250px;
   }
 }
 
@@ -415,6 +452,11 @@ form h2 {
 form h2 span {
   padding-bottom: 3px;
   border-bottom: 2px solid #99E2D0;
+}
+@media screen and (min-width: 600px) {
+  form h2 {
+    font-size: 20px;
+  }
 }
 @media screen and (min-width: 1025px) {
   form h2 {
@@ -438,15 +480,27 @@ form button:hover {
   box-shadow: 9px 10px 9px #737373;
   background: linear-gradient(175deg, #ff88de, #9b63df);
 }
+@media screen and (min-width: 600px) {
+  form button {
+    font-size: 17px;
+    padding: 14px 9%;
+  }
+}
 @media screen and (min-width: 1025px) {
   form button {
     font-size: 20px;
     padding: 17px 6%;
   }
 }
+@media screen and (min-width: 600px) {
+  form {
+    padding: 0 7%;
+  }
+}
 @media screen and (min-width: 1025px) {
   form {
     margin: 0 20%;
+    padding: 0 4%;
     border-radius: 0 0 35px 35px;
   }
 }
@@ -463,6 +517,11 @@ form button:hover {
   font-size: 15px;
   padding-bottom: 5px;
 }
+@media screen and (min-width: 600px) {
+  .list-menu h3 {
+    font-size: 16px;
+  }
+}
 @media screen and (min-width: 1025px) {
   .list-menu h3 {
     font-size: 18px;
@@ -471,6 +530,11 @@ form button:hover {
 .list-menu p {
   font-size: 14px;
   font-weight: 100;
+}
+@media screen and (min-width: 600px) {
+  .list-menu p {
+    font-size: 15px;
+  }
 }
 @media screen and (min-width: 1025px) {
   .list-menu p {
@@ -482,6 +546,11 @@ form button:hover {
 }
 .list-menu span {
   font-size: 14px;
+}
+@media screen and (min-width: 600px) {
+  .list-menu span {
+    font-size: 16px;
+  }
 }
 @media screen and (min-width: 1025px) {
   .list-menu span {
