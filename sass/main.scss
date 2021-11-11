@@ -56,7 +56,7 @@ $breakpoints:(
 }
 
 @mixin images-menus{
-	background-size: 130% auto;
+	background-size: auto 60%;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: top center;
@@ -125,7 +125,7 @@ header{
 
 /*localisation*/
 
-.localisation{
+.main-texte{
 	@include centre;
 	padding: 15px 0;
 	i{
@@ -135,7 +135,7 @@ header{
 
 /*slogan+bouton*/
 
-.slogan{
+.main-slogan{
 	background-color: $couleur-fond-secondaire;
 	padding: 45px 9%;
 	text-align: center;
@@ -161,7 +161,7 @@ header{
 
 /*fonctionnement*/
 
-.fonctionnement{
+.main-fonctionnement{
 	background-color: $couleur-fond-primaire;
 	padding: 50px 5%;
 	h2{
@@ -268,7 +268,7 @@ header{
 	}
 }
 
-.cards{
+.section-cards{
 	@include tablette{
 		display: flex;
 		justify-content: space-between;
@@ -285,7 +285,7 @@ figcaption{
 	}
 }
 
-.nouveau{
+.figure-nouveau{
 	position: absolute;
 	top: 12px;
 	right: 12px;
@@ -347,27 +347,6 @@ footer{
 
 /*page des menus*/
 
-/*images restaurants*/
-
-.la-palette-du-gout{
-	background-image: url("../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
-	@include images-menus;
-}
-
-.la-note-enchantee{
-	background-image: url("../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
-	@include images-menus;
-}
-.a-la-francaise{
-	background-image: url("../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
-	@include images-menus;
-}
-
-.le-delice-des-sens{
-	background-image: url("../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
-	@include images-menus;
-}
-
 /*header*/
 
 .header-menu{
@@ -390,8 +369,8 @@ footer{
 
 /*menu*/
 
-.menu{
-	padding-top: 200px;
+.main-menu{
+	padding-top: 250px;
 	h1{
 		display: flex;
 		justify-content: space-between;
@@ -410,7 +389,27 @@ footer{
 		@include desktop{
 			margin: 250px 20% 0 20%;
 			font-size: 33px;
+			padding: 40px 8% 10px 4%;
 		}
+	}
+	&--la-palette-du-gout{
+		background-image: url("../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+		@include images-menus;
+	}
+
+	&--la-note-enchantee{
+		background-image: url("../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+		@include images-menus;
+		background-size: auto 75%;
+	}
+	&--a-la-francaise{
+		background-image: url("../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+		@include images-menus;
+	}
+
+	&--le-delice-des-sens{
+		background-image: url("../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+		@include images-menus;
 	}
 	@include tablette{
 		padding-top: 250px;
@@ -463,16 +462,23 @@ form{
 	}
 }
 
-.list-menu{
+.form-menu{
 	text-align: left;
 	background-color: $couleur-fond-primaire;
 	margin-bottom: 15px;
 	@include ombres;
-	padding: 10px 23px 10px 10px;
 	border-radius: 13px;
+	display: flex;
+	justify-content: space-between;
+	overflow: hidden;
+	position: relative;
 	h3{
 		font-size: 15px;
 		padding-bottom: 5px;
+		overflow: hidden;
+		white-space: nowrap;
+        text-overflow: ellipsis;
+        display: block;
 		@include tablette{
 			font-size: 16px;
 		}
@@ -483,6 +489,10 @@ form{
 	p{
 		font-size: 14px;
 		font-weight: 100;
+		overflow: hidden;
+		white-space: nowrap;
+        text-overflow: ellipsis;
+        display: block;
 		@include tablette{
 			font-size: 15px;
 		}
@@ -502,9 +512,49 @@ form{
 			font-size: 19px;
 		}
 	}
+	&--flex{
+		display: flex;
+		justify-content: space-between;
+	}
+	&:hover {
+		.form-titres{
+			width: 85%;
+		}
+		.form-selection{
+			transform: translate(0, 0)
+		}
+		i{
+			transform: translate(0, 0) rotate(1turn);
+		}
+	}
 }
 
-.menu-flex{
+.form-titres{
+	padding: 10px 23px 10px 10px;
+	width: 100%;
+	transition: 450ms 50ms;
+
+}
+
+.form-selection{
+	position: absolute;
+	top: 0;
+	right: 0;
+	background-color: $couleur-tertiaire;
+	width: 60px;
+	height: 100%;
+	transform: translate(70px, 0);
+	transition-duration: 500ms;
 	display: flex;
-	justify-content: space-between;
+	align-items: center;
+	justify-content: center;
+	i{
+		font-size: 13px;
+		color: $couleur-tertiaire;
+		background-color: white;
+		padding: 4px;
+		border-radius: 50px;
+		transform: translate(-15px, 0) rotate(0turn);
+		transition: 500ms 100ms;
+	}
 }
