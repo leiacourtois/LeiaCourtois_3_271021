@@ -89,7 +89,19 @@ $breakpoints:(
 	animation: apparition-progressive 900ms $delais;
 	animation-fill-mode: both;
 }
-	
+
+@mixin coeur {
+	font-weight: 500;
+	&:hover{
+		background-clip: content-box;
+		transition: color 200ms, font-weight 50ms;
+		font-weight: 600;
+		background: -webkit-linear-gradient(top, $couleur-primaire 30%, $couleur-secondaire 70%);
+			-webkit-background-clip: text;
+		color: transparent;
+	}
+}
+
 @keyframes apparition-progressive{
 	0%{
 		opacity: 0;
@@ -366,7 +378,10 @@ header{
 	i{
 		font-weight: 50;
 		font-size: 20px;
-
+		@include coeur;
+		@include desktop{
+			font-size: 25px;
+		}
 	}
 	h3{
 		transition: 400ms;
@@ -486,6 +501,7 @@ footer{
 		border-radius: 35px 35px 0 0;
 		i{
 			font-weight: 100;
+			@include coeur;
 		}
 		@include tablette{
 			font-size: 28px;

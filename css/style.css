@@ -312,6 +312,20 @@ header img, .header-menu img {
 #restaurants i {
   font-weight: 50;
   font-size: 20px;
+  font-weight: 500;
+}
+#restaurants i:hover {
+  background-clip: content-box;
+  transition: color 200ms, font-weight 50ms;
+  font-weight: 600;
+  background: -webkit-linear-gradient(top, #9356DC 30%, #FF79DA 70%);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+@media screen and (min-width: 1025px) {
+  #restaurants i {
+    font-size: 25px;
+  }
 }
 #restaurants h3 {
   transition: 400ms;
@@ -437,6 +451,15 @@ footer p {
 }
 .main-menu h1 i {
   font-weight: 100;
+  font-weight: 500;
+}
+.main-menu h1 i:hover {
+  background-clip: content-box;
+  transition: color 200ms, font-weight 50ms;
+  font-weight: 600;
+  background: -webkit-linear-gradient(top, #9356DC 30%, #FF79DA 70%);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 @media screen and (min-width: 600px) {
   .main-menu h1 {
