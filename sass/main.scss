@@ -11,7 +11,7 @@ $gris-fonce : #353535;
 $couleur-fond-primaire : #FFFFFF;
 $couleur-fond-secondaire : #f6f6f6;
 $breakpoints:(
-		tablet: 600px,
+		tablette: 600px,
 		desktop: 1025px,
 	);
 
@@ -60,17 +60,19 @@ $breakpoints:(
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: top center;
-	@media screen and (min-width: map-get($breakpoints, tablet)){
+	@media screen and (min-width: map-get($breakpoints, tablette)){
     	background-size: 100% auto;
   	}
 	@media screen and (min-width: map-get($breakpoints, desktop)){
 		background-position: center center;
+		background-size: 120% auto;
+
 	}
 
 }
 
 @mixin tablette{
-  @media screen and (min-width: map-get($breakpoints, tablet)){
+  @media screen and (min-width: map-get($breakpoints, tablette)){
       @content;
   }
 }
@@ -79,6 +81,109 @@ $breakpoints:(
   @media screen and (min-width: map-get($breakpoints, desktop)){
       @content;
   }
+}
+
+@mixin apparition-progressive ($delais) {
+	opacity: 1;
+	transform: translateY(0);
+	animation: apparition-progressive 900ms $delais;
+	animation-fill-mode: both;
+}
+	
+@keyframes apparition-progressive{
+	0%{
+		opacity: 0;
+		transform: translateY(5vh);
+	}
+
+	100%{
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes slide{
+	0%{
+	transform: scale(1);}
+	50%{
+	transform: scale(2);
+	opacity: 0.5;}
+	100%{
+	transform: scale(1);}
+	
+}
+
+@keyframes loader{
+	0%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 0;
+	}
+}
+
+@keyframes page{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+
+/*loading spinner*/
+
+.spinner{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: #eaeaea;
+	animation: loader 500ms 2s;
+	animation-fill-mode: both;
+}
+
+.spinner-point{
+	padding: 5px;
+	border-radius: 100px;
+	top: 50%;
+	right: 50%;
+	position: absolute;
+	animation: slide 800ms infinite;
+	&--un{
+		background-color: $couleur-primaire;
+		margin-right: 100px;
+	}
+	&--deux{
+		background-color: $couleur-secondaire;
+		animation-delay: 100ms;
+		margin-right: 60px;
+	}
+	&--trois{
+		background-color: $couleur-tertiaire;
+		margin-right: 20px;
+		animation-delay: 200ms;
+	}
+	&--quatre{
+		background-color: $couleur-primaire;
+		margin-right: -20px;
+		animation-delay: 300ms;
+	}
+	&--cinq{
+		background-color: $couleur-secondaire;
+		animation-delay: 400ms;
+		margin-right: -60px;
+	}
+	&--six{
+		background-color: $couleur-tertiaire;
+		margin-right: -100px;
+		animation-delay: 500ms;
+	}
+}
+
+.page{
+	opacity: 0;
+	animation: page 500ms 2s;
+	animation-fill-mode: both;
 }
 
 /*balises générales*/
@@ -512,6 +617,36 @@ form{
 			font-size: 19px;
 		}
 	}
+	&--un{
+	 	@include apparition-progressive (500ms);
+	}
+	&--deux{
+	 	@include apparition-progressive (900ms);
+	}
+	&--trois{
+	 	@include apparition-progressive (1300ms);
+	}
+	&--quatre{
+	 	@include apparition-progressive (1700ms);
+	}
+	&--cinq{
+	 	@include apparition-progressive (2100ms);
+	}
+	&--six{
+	 	@include apparition-progressive (2500ms);
+	}
+	&--sept{
+	 	@include apparition-progressive (2900ms);
+	}
+	&--huit{
+	 	@include apparition-progressive (3300ms);
+	}
+	&--neuf{
+	 	@include apparition-progressive (3700ms);
+	}
+	&--dix{
+	 	@include apparition-progressive (3950ms);
+	}
 	&--flex{
 		display: flex;
 		justify-content: space-between;
@@ -527,12 +662,22 @@ form{
 			transform: translate(0, 0) rotate(1turn);
 		}
 	}
+	@include tablette{
+		&:hover {
+			.form-titres{
+				width: 90%;
+			}
+		}
+	}
 }
 
 .form-titres{
 	padding: 10px 23px 10px 10px;
 	width: 100%;
 	transition: 450ms 50ms;
+	@include desktop{
+		padding: 15px 23px 15px 15px;
+	}
 
 }
 
@@ -556,5 +701,9 @@ form{
 		border-radius: 50px;
 		transform: translate(-15px, 0) rotate(0turn);
 		transition: 500ms 100ms;
+	}
+	@include tablette{
+		width: 76px;
+		transform: translate(80px, 0);
 	}
 }

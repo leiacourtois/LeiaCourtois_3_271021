@@ -5,6 +5,98 @@
   box-sizing: border-box;
 }
 
+@keyframes apparition-progressive {
+  0% {
+    opacity: 0;
+    transform: translateY(5vh);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slide {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(2);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes loader {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes page {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*loading spinner*/
+.spinner {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #eaeaea;
+  animation: loader 500ms 2s;
+  animation-fill-mode: both;
+}
+
+.spinner-point {
+  padding: 5px;
+  border-radius: 100px;
+  top: 50%;
+  right: 50%;
+  position: absolute;
+  animation: slide 800ms infinite;
+}
+.spinner-point--un {
+  background-color: #9356DC;
+  margin-right: 100px;
+}
+.spinner-point--deux {
+  background-color: #FF79DA;
+  animation-delay: 100ms;
+  margin-right: 60px;
+}
+.spinner-point--trois {
+  background-color: #99E2D0;
+  margin-right: 20px;
+  animation-delay: 200ms;
+}
+.spinner-point--quatre {
+  background-color: #9356DC;
+  margin-right: -20px;
+  animation-delay: 300ms;
+}
+.spinner-point--cinq {
+  background-color: #FF79DA;
+  animation-delay: 400ms;
+  margin-right: -60px;
+}
+.spinner-point--six {
+  background-color: #99E2D0;
+  margin-right: -100px;
+  animation-delay: 500ms;
+}
+
+.page {
+  opacity: 0;
+  animation: page 500ms 2s;
+  animation-fill-mode: both;
+}
+
 /*balises générales*/
 body {
   font-family: "Roboto", sans-serif;
@@ -374,6 +466,7 @@ footer p {
 @media screen and (min-width: 1025px) {
   .main-menu--la-palette-du-gout {
     background-position: center center;
+    background-size: 120% auto;
   }
 }
 .main-menu--la-note-enchantee {
@@ -392,6 +485,7 @@ footer p {
 @media screen and (min-width: 1025px) {
   .main-menu--la-note-enchantee {
     background-position: center center;
+    background-size: 120% auto;
   }
 }
 .main-menu--a-la-francaise {
@@ -409,6 +503,7 @@ footer p {
 @media screen and (min-width: 1025px) {
   .main-menu--a-la-francaise {
     background-position: center center;
+    background-size: 120% auto;
   }
 }
 .main-menu--le-delice-des-sens {
@@ -426,6 +521,7 @@ footer p {
 @media screen and (min-width: 1025px) {
   .main-menu--le-delice-des-sens {
     background-position: center center;
+    background-size: 120% auto;
   }
 }
 @media screen and (min-width: 600px) {
@@ -565,6 +661,66 @@ form button:hover {
     font-size: 19px;
   }
 }
+.form-menu--un {
+  opacity: 1;
+  transform: translateY(0);
+  animation: apparition-progressive 900ms 500ms;
+  animation-fill-mode: both;
+}
+.form-menu--deux {
+  opacity: 1;
+  transform: translateY(0);
+  animation: apparition-progressive 900ms 900ms;
+  animation-fill-mode: both;
+}
+.form-menu--trois {
+  opacity: 1;
+  transform: translateY(0);
+  animation: apparition-progressive 900ms 1300ms;
+  animation-fill-mode: both;
+}
+.form-menu--quatre {
+  opacity: 1;
+  transform: translateY(0);
+  animation: apparition-progressive 900ms 1700ms;
+  animation-fill-mode: both;
+}
+.form-menu--cinq {
+  opacity: 1;
+  transform: translateY(0);
+  animation: apparition-progressive 900ms 2100ms;
+  animation-fill-mode: both;
+}
+.form-menu--six {
+  opacity: 1;
+  transform: translateY(0);
+  animation: apparition-progressive 900ms 2500ms;
+  animation-fill-mode: both;
+}
+.form-menu--sept {
+  opacity: 1;
+  transform: translateY(0);
+  animation: apparition-progressive 900ms 2900ms;
+  animation-fill-mode: both;
+}
+.form-menu--huit {
+  opacity: 1;
+  transform: translateY(0);
+  animation: apparition-progressive 900ms 3300ms;
+  animation-fill-mode: both;
+}
+.form-menu--neuf {
+  opacity: 1;
+  transform: translateY(0);
+  animation: apparition-progressive 900ms 3700ms;
+  animation-fill-mode: both;
+}
+.form-menu--dix {
+  opacity: 1;
+  transform: translateY(0);
+  animation: apparition-progressive 900ms 3950ms;
+  animation-fill-mode: both;
+}
 .form-menu--flex {
   display: flex;
   justify-content: space-between;
@@ -578,11 +734,21 @@ form button:hover {
 .form-menu:hover i {
   transform: translate(0, 0) rotate(1turn);
 }
+@media screen and (min-width: 600px) {
+  .form-menu:hover .form-titres {
+    width: 90%;
+  }
+}
 
 .form-titres {
   padding: 10px 23px 10px 10px;
   width: 100%;
   transition: 450ms 50ms;
+}
+@media screen and (min-width: 1025px) {
+  .form-titres {
+    padding: 15px 23px 15px 15px;
+  }
 }
 
 .form-selection {
@@ -606,6 +772,12 @@ form button:hover {
   border-radius: 50px;
   transform: translate(-15px, 0) rotate(0turn);
   transition: 500ms 100ms;
+}
+@media screen and (min-width: 600px) {
+  .form-selection {
+    width: 76px;
+    transform: translate(80px, 0);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
