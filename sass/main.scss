@@ -97,7 +97,7 @@ $breakpoints:(
 		transition: color 200ms, font-weight 50ms;
 		font-weight: 600;
 		background: -webkit-linear-gradient(top, $couleur-primaire 30%, $couleur-secondaire 70%);
-			-webkit-background-clip: text;
+		-webkit-background-clip: text;
 		color: transparent;
 	}
 }
