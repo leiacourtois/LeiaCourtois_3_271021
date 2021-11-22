@@ -91,14 +91,11 @@ $breakpoints:(
 }
 
 @mixin coeur {
-	font-weight: 500;
+	&:hover + .coeur-deux{
+		transform: scale(1.1);
+	}
 	&:hover{
-		background-clip: content-box;
-		transition: color 200ms, font-weight 50ms;
-		font-weight: 600;
-		background: -webkit-linear-gradient(top, $couleur-primaire 30%, $couleur-secondaire 70%);
-		-webkit-background-clip: text;
-		color: transparent;
+		opacity: 0;
 	}
 }
 
@@ -223,6 +220,22 @@ h2{
 	@include desktop{
 		font-size: 28px;
 	}
+}
+
+.coeur-un{
+		z-index: 2;
+		opacity: 1;
+		transition: 300ms;
+		@include coeur;
+	}
+
+.coeur-deux{
+	transform: scale(0);
+	transition: transform 400ms;
+	background: -webkit-linear-gradient(top, $couleur-primaire 30%, $couleur-secondaire 70%);
+	-webkit-background-clip: text;
+	color: transparent;
+	z-index: 1;
 }
 
 /*header*/
@@ -376,9 +389,9 @@ header{
 		}
 	}
 	i{
-		font-weight: 50;
+		position: absolute;
+		margin-left: -20px;
 		font-size: 20px;
-		@include coeur;
 		@include desktop{
 			font-size: 25px;
 		}
@@ -500,8 +513,12 @@ footer{
 		font-size: 23px;
 		border-radius: 35px 35px 0 0;
 		i{
-			font-weight: 100;
-			@include coeur;
+			position: absolute;
+			font-size: 35px;
+			margin-left: -2%;
+			@include desktop{
+				margin-left: 0;
+			}
 		}
 		@include tablette{
 			font-size: 28px;

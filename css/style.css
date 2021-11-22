@@ -131,6 +131,27 @@ h2 {
   }
 }
 
+.coeur-un {
+  z-index: 2;
+  opacity: 1;
+  transition: 300ms;
+}
+.coeur-un:hover + .coeur-deux {
+  transform: scale(1.1);
+}
+.coeur-un:hover {
+  opacity: 0;
+}
+
+.coeur-deux {
+  transform: scale(0);
+  transition: transform 400ms;
+  background: -webkit-linear-gradient(top, #9356DC 30%, #FF79DA 70%);
+  -webkit-background-clip: text;
+  color: transparent;
+  z-index: 1;
+}
+
 /*header*/
 header, .header-menu {
   display: flex;
@@ -310,17 +331,9 @@ header img, .header-menu img {
   }
 }
 #restaurants i {
-  font-weight: 50;
+  position: absolute;
+  margin-left: -20px;
   font-size: 20px;
-  font-weight: 500;
-}
-#restaurants i:hover {
-  background-clip: content-box;
-  transition: color 200ms, font-weight 50ms;
-  font-weight: 600;
-  background: -webkit-linear-gradient(top, #9356DC 30%, #FF79DA 70%);
-  -webkit-background-clip: text;
-  color: transparent;
 }
 @media screen and (min-width: 1025px) {
   #restaurants i {
@@ -450,16 +463,14 @@ footer p {
   border-radius: 35px 35px 0 0;
 }
 .main-menu h1 i {
-  font-weight: 100;
-  font-weight: 500;
+  position: absolute;
+  font-size: 35px;
+  margin-left: -2%;
 }
-.main-menu h1 i:hover {
-  background-clip: content-box;
-  transition: color 200ms, font-weight 50ms;
-  font-weight: 600;
-  background: -webkit-linear-gradient(top, #9356DC 30%, #FF79DA 70%);
-  -webkit-background-clip: text;
-  color: transparent;
+@media screen and (min-width: 1025px) {
+  .main-menu h1 i {
+    margin-left: 0;
+  }
 }
 @media screen and (min-width: 600px) {
   .main-menu h1 {
