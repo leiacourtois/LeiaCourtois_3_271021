@@ -515,7 +515,7 @@ footer{
 		i{
 			position: absolute;
 			font-size: 35px;
-			margin-left: -2%;
+			margin-left: -30px;
 			@include desktop{
 				margin-left: 0;
 			}
@@ -531,22 +531,22 @@ footer{
 		}
 	}
 	&--la-palette-du-gout{
-		background-image: url("../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+		background-image: url("../../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
 		@include images-menus;
 	}
 
 	&--la-note-enchantee{
-		background-image: url("../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+		background-image: url("../../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
 		@include images-menus;
 		background-size: auto 75%;
 	}
 	&--a-la-francaise{
-		background-image: url("../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+		background-image: url("../../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
 		@include images-menus;
 	}
 
 	&--le-delice-des-sens{
-		background-image: url("../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+		background-image: url("../../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
 		@include images-menus;
 	}
 	@include tablette{
